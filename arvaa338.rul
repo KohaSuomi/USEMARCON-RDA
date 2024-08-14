@@ -14,6 +14,11 @@
 
 // 245$h based guesses are mostly gone...
 
+
+#if (Exists(@338))
+338 | 338 | S
+#endif
+
 // Object/esine/
 #if (Not Exists(@338)) And (Not Exists(@B38)) And (Not Exists(@773)) And \
     ( @000/7/ = 'r' )
