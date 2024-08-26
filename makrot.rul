@@ -194,13 +194,13 @@
                          RegReplace('\\bVT(\\b|\\.)', 'Vanha testamentti', 'g')
 
 
-#define macro FIKTIIVINEN_HAHMO | RegReplace('fikt\\.|fiktiivinen henkilö|fiktiv gestalt', '(fiktiivinen hahmo)', 'g');
+#define macro FIKTIIVINEN_HAHMO | RegReplace('fikt\\.|fiktiivinen henkilö|fiktiv gestalt', '(fiktiivinen hahmo)', 'g'); RegReplace('\\(\\(fiktiivinen hahmo\\)\\)', '(fiktiivinen hahmo)')
 
-#define macro FIKTIV_GESTALT | RegReplace('fikt\\.|fiktiivinen henkilö|fiktiivinen hahmo', '(fiktiv gestalt)', 'g');
+#define macro FIKTIV_GESTALT | RegReplace('fikt\\.|fiktiivinen henkilö|fiktiivinen hahmo', '(fiktiv gestalt)', 'g'); RegReplace('\\(\\(fiktiv gestalt\\)\\)', '(fiktiv gestalt)')
 
-#define macro FIKTIIVINEN_YHTEISO | RegReplace('fikt\\.', '(fiktiivinen yhteisö)')
+#define macro FIKTIIVINEN_YHTEISO | RegReplace('fikt\\.', '(fiktiivinen yhteisö)'); RegReplace('\\(\\(fiktiivinen yhteisö\\)\\)', '(fiktiivinen yhteisö)')
 
-#define macro FIKTIV_INSTITUTION | RegReplace('fikt\\.', '(fiktiv institution)')
+#define macro FIKTIV_INSTITUTION | RegReplace('fikt\\.', '(fiktiv institution)'); RegReplace('\\(\\(fiktiv institution\\)\\)', '(fiktiivinen institution)')
 
 // TODO: samma på svenska, t.ex.: f. => föddes?
 
