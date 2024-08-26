@@ -27,7 +27,9 @@
                       RegReplace('\\bkuv\\.', 'kuvitettu', 'g'); \
                       RegReplace('\\bmuotokuv\\.', 'muotokuvia', 'g'); \
                       RegReplace('verkkojulkaisu', 'verkkoaineisto', 'g'); \
-                      RegReplace('Verkkojulkaisu', 'Verkkoaineisto', 'g')
+                      RegReplace('Verkkojulkaisu', 'Verkkoaineisto', 'g'); \
+		      If ( @000/7/ = 'c' ) Then RegReplace ('parts', 'stemmaa') Else S; \
+		      If ( @000/7/ = 'c' ) Then RegReplace ('\\bscore\\b', 'partituuri') Else S
 
 #define macro SV300AE | RegReplace('\\b[Nn]\\.', 'noin', 'g'); \
                       RegReplace('\\bsek([^A-Z-a-z])', 's\\1', 'g'); \
@@ -36,7 +38,12 @@
                       RegReplace('\\bkuv\\.', 'kuvitettu', 'g'); \
                       RegReplace('verkkojulkaisu', 'verkkoaineisto', 'g'); \
                       RegReplace('Verkkojulkaisu', 'Verkkoaineisto', 'g')
-		      
+
+
+
+
+
+	
 // Usemarcon has Mixed() but I (nv) can't get it to work
 #define macro UPPERCASE130L | RegReplace('^a', 'A'); RegReplace('^b', 'B'); \
 	RegReplace('^c', 'C'); RegReplace('^d', 'D'); RegReplace('^e', 'E'); \
