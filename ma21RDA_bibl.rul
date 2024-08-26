@@ -275,12 +275,20 @@ Y30   | 300    | RegReplace('($[ab][^$]+[0-9a-z)])$b', '\\1 :$b'); \
 538I1 | 538I2 | S
 538   | 538   | S
 
+
+// As per MELKEHITYS-2566
+546I1 | 546I1 | S
+546I2 | 546I2 | S
+546$b | 546$b | S; RegReplace('\\bStaff [Nn]otation\\b', 'Viivastonuottikirjoitus')	
+546$? | 546$? | S
+
+
 600I1 | 600I1  | S
 600I2 | 600I2  | S
-#if (RegFind(@040$b, 'swe') = 0)
+#if (RegFind(@040(1)$b, 'swe') = 0)
 600$c | <C60$c | FIKTIV_GESTALT
 #endif
-#if (RegFind(@040$b, 'swe') != 0)
+#if (RegFind(@040(1)$b, 'swe') != 0)
 600$c | <C60$c | FIKTIIVINEN_HAHMO
 #endif
 600$d | <C60$d | AIKAMAAREET
