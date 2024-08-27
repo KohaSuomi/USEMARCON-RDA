@@ -18,6 +18,8 @@ versio 13.3.2024 / Kansalliskirjasto (NV)
 000/20/ | 000/20/ | S
 000/21-24/ | 000/21-24/ | '4500'
 
+008 | 008 | S
+
 015I1 | 015I1 | S
 015I2 | 015I2 | S
 015$? | 015$? | Replace('.,' By ','); \
@@ -49,6 +51,9 @@ versio 13.3.2024 / Kansalliskirjasto (NV)
 028I2 | 028I2  | S
 028$q | 028$q  | SIDOSASUT
 028$? | 028$?  | S
+
+
+#include "add_missing_041.rul"
 
 
 100I1 | 100I1  | S

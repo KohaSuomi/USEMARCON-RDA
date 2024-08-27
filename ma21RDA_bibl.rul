@@ -49,6 +49,10 @@ versio 22.8.2024 / Kansalliskirjasto (NV)
 028$q | 028$q  | SIDOSASUT
 028$? | 028$?  | S
 
+
+#include "add_missing_041.rul"
+
+
 100I1 | 100I1  | S
 100I2 | 100I2  | S
 
