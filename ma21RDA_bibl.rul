@@ -212,7 +212,16 @@ B43 | 243 | COMMA2DOT_BEFORE_L
 #include "arvaa338.rul"
 
 
-
+347I1 | 347I1 | S
+347I2 | 347I2 | S
+#if (RegFind(@040(1)$b, 'swe') = 0)
+347$a | 347$a | S; SV347A
+#endif
+#if (RegFind(@040(1)$b, 'swe') != 0)
+347$a | 347$a | S; FI347A
+#endif
+// Should we handle/remove $2 and $0?
+347$? | 347$? | S
 
 
 

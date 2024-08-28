@@ -223,6 +223,16 @@ Y30   | 300    | S
 #include "sv_arvaa337.rul"
 #include "sv_arvaa338.rul"
 
+347I1 | 347I1 | S
+347I2 | 347I2 | S
+#if (RegFind(@040(1)$b, 'fin') = 0)
+347$a | 347$a | S; FI347A
+#endif
+#if (RegFind(@040(1)$b, 'fin') != 0)
+347$a | 347$a | S; SV347A
+#endif
+// Should we handle/remove $2 and $0?
+347$? | 347$? | S
 
 490I1 | 490I1 | S
 490I2 | 490I2 | S
